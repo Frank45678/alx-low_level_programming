@@ -16,9 +16,9 @@ void ch_free_grid(char **grid, size_t height)
 	}
 }
 /**
- * strtow - splits strings into words
- * @str: strind with words to be splitted
- * Return: a pointer to the new allocated memory to the string
+ * strtow - splits string into words
+ * @str: string with words to be splitted
+ * Return: a pointer to the new allocated memory for the string
  */
 char **strtow(char *str)
 {
@@ -30,7 +30,7 @@ char **strtow(char *str)
 	for (c = height = 0; str[c] != '\0'; c++)
 		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 		height++;
-	aout = malloc(sizeof(char *) * (height = 1));
+	aout = malloc(sizeof(char *) * (height + 1));
 	if (aout == NULL)
 	{
 		free(aout);
@@ -53,10 +53,9 @@ char **strtow(char *str)
 				break;
 			}
 		}
-	for (j = 0; a1 <= c; a1++, j++)
+		for (j = 0; a1 <= c; a1++, j++)
 		aout[i][j] = str[a1];
 	aout[i][j] = '\0';
-
 	}
 	aout[i] = NULL;
 	return (aout);
