@@ -25,7 +25,7 @@ int is_digit(char *s)
 /**
  * _strlen - returns the length of a string
  * @s: string to evaluate
- * Return: length of the string
+ * Return: length of thr string
  */
 int _strlen(char *s)
 {
@@ -94,5 +94,5 @@ int main(int argc, char *argv[])
 		_putchar('0');
 	_putchar('\n');
 	free(result);
-		return (0);
+	return (0);
 }
