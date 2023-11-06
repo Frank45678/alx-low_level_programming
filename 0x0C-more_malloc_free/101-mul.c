@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 #define ERR_MSG "Error"
+
 /**
  * is_digit - check if a string contains a non-digit char
  * @s: string to be evaluated
@@ -14,11 +15,11 @@ int is_digit(char *s)
 
 	while (s[i])
 	{
-		if (s[i] < '0' || s[i] > 9)
+		if (s[i] < '0' || s[i] > '9')
 			return (0);
 		i++;
 	}
-	return (i);
+	return (1);
 }
 
 /**
@@ -68,7 +69,7 @@ int main(int argc, char *argv[])
 			return (1);
 	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
-	for (len1 = len1 - 1; len >= 0; len1--)
+	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
 		digit1 = s1[len] - '0';
 		carry = 0;
